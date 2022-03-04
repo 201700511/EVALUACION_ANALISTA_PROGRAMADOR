@@ -1,0 +1,32 @@
+
+.title1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    color: black; 
+    font-size: 35px; 
+    margin: 0% auto;
+    text-align: center;
+    font-family: 'Titan One';   
+    text-shadow: 1px 2px 1px  rgba(0,0,0,.5);
+    font-weight: bold;
+  }
+
+.title2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    color: gray; 
+    font-size: 28px; 
+    margin: 0% auto;
+    text-align: center;
+    font-family: 'Titan One';   
+    text-shadow: 1px 2px 1px  rgba(0,0,0,.5);
+  }
+
+
+/* .title-label{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+} */

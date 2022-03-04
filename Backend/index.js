@@ -32,17 +32,6 @@ app.use((req, res, next) => {
 const port = 9000;
 
 
-const rest = new (require('rest-mssql-nodejs'))({
-    user: 'semi2',
-    password: 'semi2',
-    server: 'LAPTOP-78OJDO4O',
-    database: 'USAC_EPS',
-    port: 1433,
-    options: { 
-        encrypt: true
-    } 
-});
-
 
 //imports routes
 const CustomerRoute = require ('./services/Customer/Customer')
