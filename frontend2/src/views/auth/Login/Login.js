@@ -8,6 +8,7 @@ import './Login.css'
 import loginController from '../../../controller/sessions'
 import { settingsOutline } from 'ionicons/icons';
 import Cookies from 'universal-cookie'
+import logo from '../../../assets/img/logo.jpg'
 
 var jwt = require('jsonwebtoken');
 const cookies = new Cookies()
@@ -38,32 +39,20 @@ const Login = () =>{
               })
             Swal.showLoading()
 
-            var logued = '';
-
-            var login = loginController.login({
+            loginController.login({
                 user,
                 pass
             })
             .then((state) => {
-                if (state.code === 200){
-                // para agregar a sessionStorage (innecesario actualmente)
+                console.log(state)
+                if (state.status === 200){
                     const {user, pass} = param
                     let ac = {user, pass}
                     let account = JSON.stringify(ac)
                     sessionStorage.setItem('Account', account)
 
-                    var array = {
-                        user: user
-                    }
-                    var token = jwt.sign(state, "economicas");
-                    // var token = jwt.sign(array, process.env.SECRET_JWT);
-                    cookies.set('token', token, { path: '/' });
+                    cookies.set('token', state.token, { path: '/' });
 
-                    // localStorage.setItem('myData', account);
-                    // setLoged(true)
-                    
-                    //Sesiones de usuarios
-                    // setLoged(false)
                     setTimeout(() => {
                         Swal.close()
                         window.location.href = "/dashboard";
@@ -107,7 +96,8 @@ const Login = () =>{
         <div className='login-container'>
 
             <div className='login-content'>
-                <Title  title1='SOY ECONÓMICAS'  />
+                <img className="logo" src={logo} width="170" />
+                <Title  title1='EL CAMIONCITO'  />
                 <Title className='title-label' title2='Bienvenido al Portal'  />
 
                 <div className="box-color">

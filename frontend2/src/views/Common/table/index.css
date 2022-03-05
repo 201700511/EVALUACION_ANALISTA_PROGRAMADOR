@@ -1,0 +1,63 @@
+.ReactTable{
+  table-layout: fixed;
+  text-align: center;
+}
+
+.ReactTable .rt-thead .rt-resizable-header-content{
+  justify-content: center;
+  word-wrap:break-word;
+  white-space: pre-wrap;
+}
+
+.ReactTable .rt-tbody{
+  background-color: #f6f3f3;
+  font-family: "Cerebri Sans,sans-serif"; 
+  font-size: 1.3em;
+}
+
+.ReactTable .rt-thead .rt-tr{
+  background-color: #ffcb6c;
+  font-family: "Cerebri Sans,sans-serif"; 
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.ReactTable .rt-tbody .rt-td{
+  justify-content: center;
+  word-wrap:break-word;
+  white-space: pre-wrap;
+}
+
+.ReactTable .rt-thead.-filters input{
+  color: black;
+}
+
+.ReactTable .-pagination input{
+  color: black;
+}
+
+.ReactTable .-pagination  select{
+  color: black;
+}
+
+.ReactTable .rt-thead.-filters input{
+  color: black;
+}
+
+.Button_table{
+	display:inline-block;
+	text-align:center;
+	font-size:14px;
+	border:1px solid #007095;
+	border-radius:5px;
+	cursor:pointer;
+	color:white;
+	padding: 19px;
+	background-image: url(../../../assets/icons/plus-square-dotted.svg);
+	background-repeat:no-repeat;
+  background-size:20px 20px;
+	background-position:10px 5px;	
+	background-color:#64B469;
+  text-align: right;
+}
+.Button_table:hover{ background-color:hsl(124,20%,50%);}
