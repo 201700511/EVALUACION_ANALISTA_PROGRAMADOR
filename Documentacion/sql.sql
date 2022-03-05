@@ -43,6 +43,7 @@ create table Cliente(
 	FOREIGN KEY (Departamento_recepcion) REFERENCES Departamento(ID),
 	FOREIGN KEY (Departamento_entrega) REFERENCES Departamento(ID)
 );
+alter table Cliente add password varchar (20);
 
 
 create table Equipo_Personal(
@@ -99,9 +100,9 @@ INSERT INTO Tipo_Personal(Descripcion) VALUES ('piloto');
 INSERT INTO Tipo_Personal(Descripcion) VALUES ('ayudante');
 
 INSERT INTO Cliente 
-VALUES (123, 'Juan Alvarado', 63.2, 'Edificio DIGA, usac, zona 12', 'Zona 1, Zacapa', 'y', 1, 2, 'abc', 12345678, 'mail.@gmail.com', 1);
+VALUES (123, 'Juan Alvarado', 63.2, 'Edificio DIGA, usac, zona 12', 'Zona 1, Zacapa', 'y', 1, 2, 'abc', 12345678, '3005421270101@ingenieria.usac.edu.gt', 1, '123');
 INSERT INTO Cliente 
-VALUES (1234, 'PAblo Alvarado', 63.2, 'Zona 2, Zacapa', 'Zona 1, Huehuetenango', 'y', 2, 1, 'abc', 12345678, 'mail2.@gmail.com', 2);
+VALUES (1234, 'PAblo Alvarado', 63.2, 'Zona 2, Zacapa', 'Zona 1, Huehuetenango', 'y', 2, 1, 'abc', 12345678, 'mail2.@gmail.com', 2, '123');
 
 
 insert into Factura values ( 1, '2022-01-15', 50.5, 1);
