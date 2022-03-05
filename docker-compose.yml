@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+  backend:
+    container_name: "backend"
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: docker-node1:latest
+    restart: on-failure
+    ports: 
+      - "9000:9000"
+    networks:
+      itprofis:
+  frontend:
+    container_name: "frontend"
+    build: ./app
+    image: docker-node2:latest
+    ports:
+      - 3000:3000
+    networks:
+      itprofis:
+networks:
+  itprofis:
+    name: "itprofis"
+    driver: bridge
+
+
