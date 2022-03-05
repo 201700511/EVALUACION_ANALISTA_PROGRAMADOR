@@ -1,0 +1,36 @@
+ion-content{
+    background: gray;
+}
+
+.titulo{
+    font-family: 'Titan One';   
+    text-align: center;
+    color: blue;
+    font-size: 1.3em;
+}
+
+ion-label{
+    font-size: 10px;
+}
+
+.txt_perfil{
+    color: black; 
+    font-size: 1em; 
+    margin: 2% auto;
+    text-align: center;
+    font-family: 'Titan One';   
+    padding-top: 40px;
+    width: 80%;
+    background-color: #ffc456;
+  }
+
+.btn_perfil{
+    width: 80%;
+    margin: auto;
+}
+
+ion-datetime {
+    height: auto;
+    width: auto;
+    max-width: 350px;
+}

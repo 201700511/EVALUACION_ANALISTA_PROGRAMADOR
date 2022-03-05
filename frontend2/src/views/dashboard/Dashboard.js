@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from './pages/home/Home';
+import Perfil from './pages/home/Perfil';
+import Rep1 from './pages/Reportes/rep1/Rep1'
+import Rep2 from './pages/Reportes/rep2/Rep2'
 import { useState } from "react";
+import SideMenu, { menuItems } from "../Common/menu/SideMenu";
 
 
 const Dashboard = () =>{
@@ -10,10 +13,21 @@ const Dashboard = () =>{
 
         <div className="App">
       <Router>
+        <SideMenu
+            onCollapse={(inactive) => {
+              setInactive(inactive);
+            }}
+          />
 
         <div className={`container ${inactive ? "inactive" : ""}`}>
             <Route exact path={"/dashboard"}>
-              <Home />
+              <Perfil />
+            </Route>
+            <Route exact path={"/dashboard/Reporte1"}>
+              <Rep1 />
+            </Route>
+            <Route exact path={"/dashboard/Reporte2"}>
+              <Rep2 />
             </Route>
 
         </div>
